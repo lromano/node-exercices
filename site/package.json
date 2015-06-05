@@ -1,0 +1,15 @@
+{
+  "name": "Meadowlark",
+  "version": "1.0.0",
+  "description": "Test express project",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "console.log(\"welcome!\");"
+  },
+  "author": "Lucas Romano",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4",
+    "express3-handlebars": "^0.5.2"
+  }
+}
