@@ -1,0 +1,189 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'update', 'zombie' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 verbose request where is /zombie
+6 verbose request registry https://registry.npmjs.org/
+7 verbose request id 8bcacc3d32bc508d
+8 verbose url raw /zombie
+9 verbose url resolving [ 'https://registry.npmjs.org/', './zombie' ]
+10 verbose url resolved https://registry.npmjs.org/zombie
+11 verbose request where is https://registry.npmjs.org/zombie
+12 info trying registry request attempt 1 at 18:02:29
+13 verbose etag "5S2850MNBKV91DHZUKC6ZSOSC"
+14 http GET https://registry.npmjs.org/zombie
+15 http 304 https://registry.npmjs.org/zombie
+16 silly registry.get cb [ 304,
+16 silly registry.get   { date: 'Mon, 08 Jun 2015 16:02:29 GMT',
+16 silly registry.get     via: '1.1 varnish',
+16 silly registry.get     'cache-control': 'max-age=60',
+16 silly registry.get     etag: '"5S2850MNBKV91DHZUKC6ZSOSC"',
+16 silly registry.get     age: '0',
+16 silly registry.get     connection: 'keep-alive',
+16 silly registry.get     'x-served-by': 'cache-ams4132-AMS',
+16 silly registry.get     'x-cache': 'HIT',
+16 silly registry.get     'x-cache-hits': '1',
+16 silly registry.get     'x-timer': 'S1433779349.972149,VS0,VE161',
+16 silly registry.get     vary: 'Accept' } ]
+17 verbose etag https://registry.npmjs.org/zombie from cache
+18 verbose cache add [ 'zombie', '^3.5.0' ]
+19 verbose cache add name="zombie" spec="^3.5.0" args=["zombie","^3.5.0"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '^3.5.0',
+20 verbose parsed url   path: '^3.5.0',
+20 verbose parsed url   href: '^3.5.0' }
+21 verbose addNamed [ 'zombie', '^3.5.0' ]
+22 verbose addNamed [ null, '>=3.5.0-0 <4.0.0-0' ]
+23 silly lockFile f8102710-zombie-3-5-0 zombie@^3.5.0
+24 verbose lock zombie@^3.5.0 /home/lucas/.npm/f8102710-zombie-3-5-0.lock
+25 silly addNameRange { name: 'zombie', range: '>=3.5.0-0 <4.0.0-0', hasData: false }
+26 verbose registry.get https://registry.npmjs.org/zombie not expired, no request
+27 silly addNameRange number 2 { name: 'zombie', range: '>=3.5.0-0 <4.0.0-0', hasData: true }
+28 silly addNameRange versions [ 'zombie',
+28 silly addNameRange   [ '0.12.1',
+28 silly addNameRange     '0.12.2',
+28 silly addNameRange     '0.12.3',
+28 silly addNameRange     '0.12.4',
+28 silly addNameRange     '0.12.5',
+28 silly addNameRange     '0.12.6',
+28 silly addNameRange     '0.12.7',
+28 silly addNameRange     '0.12.8',
+28 silly addNameRange     '0.12.9',
+28 silly addNameRange     '0.12.10',
+28 silly addNameRange     '0.12.11',
+28 silly addNameRange     '0.12.12',
+28 silly addNameRange     '0.12.13',
+28 silly addNameRange     '0.12.14',
+28 silly addNameRange     '0.12.15',
+28 silly addNameRange     '0.13.0',
+28 silly addNameRange     '0.13.1',
+28 silly addNameRange     '0.13.2',
+28 silly addNameRange     '0.13.3',
+28 silly addNameRange     '0.13.4',
+28 silly addNameRange     '0.13.6',
+28 silly addNameRange     '0.13.7',
+28 silly addNameRange     '0.13.8',
+28 silly addNameRange     '0.13.9',
+28 silly addNameRange     '0.13.10',
+28 silly addNameRange     '0.13.11',
+28 silly addNameRange     '0.13.12',
+28 silly addNameRange     '0.13.13',
+28 silly addNameRange     '0.13.14',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.1.0',
+28 silly addNameRange     '1.1.1',
+28 silly addNameRange     '1.1.2',
+28 silly addNameRange     '1.1.3',
+28 silly addNameRange     '1.1.4',
+28 silly addNameRange     '1.1.5',
+28 silly addNameRange     '1.1.6',
+28 silly addNameRange     '1.1.7',
+28 silly addNameRange     '1.2.0',
+28 silly addNameRange     '1.3.0',
+28 silly addNameRange     '1.3.1',
+28 silly addNameRange     '1.4.0',
+28 silly addNameRange     '1.4.1',
+28 silly addNameRange     '2.0.0-alpha1',
+28 silly addNameRange     '2.0.0-alpha2',
+28 silly addNameRange     '2.0.0-alpha3',
+28 silly addNameRange     '2.0.0-alpha4',
+28 silly addNameRange     '2.0.0-alpha5',
+28 silly addNameRange     '2.0.0-alpha6',
+28 silly addNameRange     '2.0.0-alpha7',
+28 silly addNameRange     '2.0.0-alpha8',
+28 silly addNameRange     '2.0.0-alpha9',
+28 silly addNameRange     '2.0.0-alpha10',
+28 silly addNameRange     '2.0.0-alpha11',
+28 silly addNameRange     '2.0.0-alpha12',
+28 silly addNameRange     '2.0.0-alpha13',
+28 silly addNameRange     '2.0.0-alpha14',
+28 silly addNameRange     '2.0.0-alpha15',
+28 silly addNameRange     '2.0.0-alpha16',
+28 silly addNameRange     '2.0.0-alpha17',
+28 silly addNameRange     '2.0.0-alpha18',
+28 silly addNameRange     '2.0.0-alpha19',
+28 silly addNameRange     '2.0.0-alpha20',
+28 silly addNameRange     '2.0.0-alpha21',
+28 silly addNameRange     '2.0.0-alpha22',
+28 silly addNameRange     '2.0.0-alpha23',
+28 silly addNameRange     '2.0.0-alpha24',
+28 silly addNameRange     '2.0.0-alpha25',
+28 silly addNameRange     '2.0.0-alpha26',
+28 silly addNameRange     '2.0.0-alpha27',
+28 silly addNameRange     '2.0.0-alpha28',
+28 silly addNameRange     '2.0.0-alpha29',
+28 silly addNameRange     '2.0.0-alpha30',
+28 silly addNameRange     '2.0.0-alpha31',
+28 silly addNameRange     '2.0.0',
+28 silly addNameRange     '2.0.1',
+28 silly addNameRange     '2.0.2',
+28 silly addNameRange     '2.0.3',
+28 silly addNameRange     '2.0.4',
+28 silly addNameRange     '2.0.5',
+28 silly addNameRange     '2.0.6',
+28 silly addNameRange     '2.0.7',
+28 silly addNameRange     '2.0.8',
+28 silly addNameRange     '2.1.0',
+28 silly addNameRange     '2.1.1',
+28 silly addNameRange     '2.2.0',
+28 silly addNameRange     '2.2.1',
+28 silly addNameRange     '2.3.0',
+28 silly addNameRange     '2.3.1',
+28 silly addNameRange     '2.3.2',
+28 silly addNameRange     '2.4.0',
+28 silly addNameRange     '2.5.0',
+28 silly addNameRange     '2.5.1',
+28 silly addNameRange     '3.0.1-0',
+28 silly addNameRange     '3.0.2-0',
+28 silly addNameRange     '3.0.3-0',
+28 silly addNameRange     '3.0.4-0',
+28 silly addNameRange     '3.0.5-0',
+28 silly addNameRange     '3.0.6-0',
+28 silly addNameRange     '3.0.7-0',
+28 silly addNameRange     '3.0.8-0',
+28 silly addNameRange     '3.0.9-0',
+28 silly addNameRange     '3.0.10-0',
+28 silly addNameRange     '3.0.11-0',
+28 silly addNameRange     '3.0.12-0',
+28 silly addNameRange     '3.0.13-0',
+28 silly addNameRange     '3.0.14-0',
+28 silly addNameRange     '3.0.15',
+28 silly addNameRange     '3.1.0',
+28 silly addNameRange     '3.1.1',
+28 silly addNameRange     '4.0.0',
+28 silly addNameRange     '4.0.1',
+28 silly addNameRange     '4.0.2',
+28 silly addNameRange     '4.0.3',
+28 silly addNameRange     '4.0.4',
+28 silly addNameRange     '4.0.5',
+28 silly addNameRange     '4.0.6',
+28 silly addNameRange     '4.0.7',
+28 silly addNameRange     '4.0.8',
+28 silly addNameRange     '4.0.9',
+28 silly addNameRange     '4.0.10' ] ]
+29 silly lockFile f8102710-zombie-3-5-0 zombie@^3.5.0
+30 silly lockFile f8102710-zombie-3-5-0 zombie@^3.5.0
+31 info outdated updating []
+32 error notarget No compatible version found: zombie@'>=3.5.0-0 <4.0.0-0'
+32 error notarget Valid install targets:
+32 error notarget ["0.12.1","0.12.2","0.12.3","0.12.4","0.12.5","0.12.6","0.12.7","0.12.8","0.12.9","0.12.10","0.12.11","0.12.12","0.12.13","0.12.14","0.12.15","0.13.0","0.13.1","0.13.2","0.13.3","0.13.4","0.13.6","0.13.7","0.13.8","0.13.9","0.13.10","0.13.11","0.13.12","0.13.13","0.13.14","1.0.0","1.1.0","1.1.1","1.1.2","1.1.3","1.1.4","1.1.5","1.1.6","1.1.7","1.2.0","1.3.0","1.3.1","1.4.0","1.4.1","2.0.0-alpha1","2.0.0-alpha2","2.0.0-alpha3","2.0.0-alpha4","2.0.0-alpha5","2.0.0-alpha6","2.0.0-alpha7","2.0.0-alpha8","2.0.0-alpha9","2.0.0-alpha10","2.0.0-alpha11","2.0.0-alpha12","2.0.0-alpha13","2.0.0-alpha14","2.0.0-alpha15","2.0.0-alpha16","2.0.0-alpha17","2.0.0-alpha18","2.0.0-alpha19","2.0.0-alpha20","2.0.0-alpha21","2.0.0-alpha22","2.0.0-alpha23","2.0.0-alpha24","2.0.0-alpha25","2.0.0-alpha26","2.0.0-alpha27","2.0.0-alpha28","2.0.0-alpha29","2.0.0-alpha30","2.0.0-alpha31","2.0.0","2.0.1","2.0.2","2.0.3","2.0.4","2.0.5","2.0.6","2.0.7","2.0.8","2.1.0","2.1.1","2.2.0","2.2.1","2.3.0","2.3.1","2.3.2","2.4.0","2.5.0","2.5.1","3.0.1-0","3.0.2-0","3.0.3-0","3.0.4-0","3.0.5-0","3.0.6-0","3.0.7-0","3.0.8-0","3.0.9-0","3.0.10-0","3.0.11-0","3.0.12-0","3.0.13-0","3.0.14-0","3.0.15","3.1.0","3.1.1","4.0.0","4.0.1","4.0.2","4.0.3","4.0.4","4.0.5","4.0.6","4.0.7","4.0.8","4.0.9","4.0.10"]
+32 error notarget
+32 error notarget This is most likely not a problem with npm itself.
+32 error notarget In most cases you or one of your dependencies are requesting
+32 error notarget a package version that doesn't exist.
+33 error System Linux 3.13.0-53-generic
+34 error command "/usr/bin/node" "/usr/bin/npm" "update" "zombie"
+35 error cwd /home/lucas/projects/node/meadowlark/site
+36 error node -v v0.10.37
+37 error npm -v 1.4.28
+38 error code ETARGET
+39 verbose exit [ 1, true ]
