@@ -8,6 +8,8 @@ app.use(require('body-parser')());
 
 var formidable = require('formidable');
 
+var credentials = require('./credentials.js');
+
 // set up handlebars view engine
 var handlebars = require("express3-handlebars").create(
   {
@@ -62,6 +64,20 @@ function getWeatherData(){
 // serve static contents
 app.use(express.static(__dirname + "/public"));
 
+// cookie handling
+app.use(require('cookie-parser')(credentials.cookieSecret))
+
+// sessions (memory)
+app.use(require('express-session')());
+
+app.use(function(req, res, next){
+  res.cookie("normal_sample", 'Hello you!');
+  res.cookie("signed_sample", 'Hello world!', { signed: true});
+  req.session.userName = "Lucas";
+  next();
+});
+
+// MIDDLEWARES
 // configure page testing query param
 app.use(function(req, res, next){
   res.locals.showTests = app.get("env") !== "production" && req.query.test === '1';
@@ -72,6 +88,15 @@ app.use(function(req, res, next){
 app.use(function(req, res, next){
   if(!res.locals.partials) res.locals.partials = {}
   res.locals.partials.weather = getWeatherData();
+  next();
+});
+
+// manage flash messages
+app.use(function(req, res, next){
+  // if there's a flash message, transfer
+  // it to the context, then clear it
+  req.locals.flash = req.session.flash;
+  delete req.session.flash;
   next();
 });
 
@@ -93,6 +118,8 @@ app.get('/newsletter', function(req, res){
 });
 
 app.get('/about', function(req, res){
+  console.log("signed cookie is ", req.signedCookies.signed_sample);
+  console.log("classic cookie is ", req.cookies.normal_sample);
   res.render("about", { fortune: fortune.getFortune(), pageTestScript: '/qa/tests-about.js' });
 });
 

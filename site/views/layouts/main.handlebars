@@ -9,6 +9,14 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
   </head>
   <body>
+
+    {{#if flash}}
+      <div class="alert alert-dismissible alert-{{flash.type}}">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;<button>
+        <strong>{{flash.intro}}</strong> {{{flash.message}}}
+      </div>
+    {{/if}}
+
     <header><img src="/img/logo.png" alt="node js" /></header>
     {{{body}}}
     {{#if showTests}}
@@ -26,6 +34,7 @@
       <script>mocha.run();</script>
     {{/if}}
     <script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     {{{_sections.jquery}}}
   </body>
 </html>
