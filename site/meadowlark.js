@@ -95,7 +95,7 @@ app.use(function(req, res, next){
 app.use(function(req, res, next){
   // if there's a flash message, transfer
   // it to the context, then clear it
-  req.locals.flash = req.session.flash;
+  res.locals.flash = req.session.flash;
   delete req.session.flash;
   next();
 });
@@ -108,6 +108,21 @@ app.use(function(req, res, next){
 //   }
 //   res.send(s);
 // });
+
+// Some middleware samples
+app.use(function(req, res, next){
+  console.log("processing request for ", req.url, " ....");
+  next();
+});
+
+app.use(function(req, res, next){
+  console.log("terminating request...");
+  res.send("thanks for playing");
+});
+
+app.use(function(req, res, next){
+  console.log('whoops, i\'ll never get called!');
+});
 
 app.get("/", function(req, res){
   res.render("home");
