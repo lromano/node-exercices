@@ -10,6 +10,29 @@ var formidable = require('formidable');
 
 var credentials = require('./credentials.js');
 
+var nodemailer = require('nodemailer');
+var mailTransport = nodemailer.createTransport('SMTP', {
+  service: 'Gmail',
+  auth: {
+    user: credentials.gmail.user,
+    pass: credentials.gmail.password
+   }
+});
+
+// mailtransport demo
+mailTransport.sendMail(
+  {
+    from: '"Meadowlark Travel"<info@meadowlarktravel.com>',
+    to: 'romano.lucas@gmail.com',
+    subject: 'Your Meadowlark Travel Tour',
+    text: 'Thank you for booking your trip with Meadowlark Travel!'
+  },function(err){
+    if(err){
+      console.log('Unable to send email: ' + err);
+    }
+  }
+);
+
 // set up handlebars view engine
 var handlebars = require("express3-handlebars").create(
   {
@@ -110,19 +133,19 @@ app.use(function(req, res, next){
 // });
 
 // Some middleware samples
-app.use(function(req, res, next){
-  console.log("processing request for ", req.url, " ....");
-  next();
-});
+// app.use(function(req, res, next){
+//   console.log("processing request for ", req.url, " ....");
+//   next();
+// });
 
-app.use(function(req, res, next){
-  console.log("terminating request...");
-  res.send("thanks for playing");
-});
+// app.use(function(req, res, next){
+//   console.log("terminating request...");
+//   res.send("thanks for playing");
+// });
 
-app.use(function(req, res, next){
-  console.log('whoops, i\'ll never get called!');
-});
+// app.use(function(req, res, next){
+//   console.log('whoops, i\'ll never get called!');
+// });
 
 app.get("/", function(req, res){
   res.render("home");
